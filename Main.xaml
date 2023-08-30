@@ -1,0 +1,126 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1044.8,1660.8" sap2010:WorkflowViewState.IdRef="Activity1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:rab="clr-namespace:RCA.Activities.Browser;assembly=RCA.Activities.Browser" xmlns:rac="clr-namespace:RCA.Activities.Core;assembly=RCA.Activities.Core" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>RCA.Activities.Core</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Core</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Windows</AssemblyReference>
+      <AssemblyReference>RCA.Activities.NativeBrowser</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Excel</AssemblyReference>
+      <AssemblyReference>RCA.Activities.Browser</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="1004.8,1340.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strScript" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <rac:ReadTextFile Content="[strScript]" DisplayName="[124663856] Read Text File" FileName="script.txt" sap:VirtualizedContainerService.HintSize="982.4,59.2" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <rab:OpenBrowser DefaultDownloadFolder="{x:Null}" EdgeExecutablePath="{x:Null}" FirefoxExecutablePath="{x:Null}" HttpProxy="{x:Null}" Password="{x:Null}" UiBrowser="{x:Null}" UserName="{x:Null}" BrowserName="Chrome" ContinueOnError="False" DisplayName="[156206562] Open Browser(B)" EdgeIeMode="False" EnsureCleanSession="False" HideCommandPromptWindow="True" sap:VirtualizedContainerService.HintSize="982.4,1116.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Maximize="False" QuitBrowserOnCompletedOrFaulted="True" ShowDownloadPrompt="True" TimeoutMS="30000" Url="chrome://newtab" UseInitialBrowserUrl="False">
+      <rab:OpenBrowser.Arguments>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+      </rab:OpenBrowser.Arguments>
+      <rab:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="[156212134] Do" sap:VirtualizedContainerService.HintSize="968,1017.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <rab:InjectJs Browser="{x:Null}" LastElement="{x:Null}" LastLocator="{x:Null}" ScriptOutput="{x:Null}" ContinueOnError="False" DisplayName="[171020975] Open dino game" sap:VirtualizedContainerService.HintSize="945.6,59.2" sap2010:WorkflowViewState.IdRef="InjectJs_1" ScriptCode="window.location.href='chrome://dino'" />
+            <DoWhile DisplayName="[208664551] Do While" sap:VirtualizedContainerService.HintSize="945.6,793.6" sap2010:WorkflowViewState.IdRef="DoWhile_1">
+              <DoWhile.Variables>
+                <Variable x:TypeArguments="x:String" Name="strChoice" />
+              </DoWhile.Variables>
+              <DoWhile.Condition>True</DoWhile.Condition>
+              <Sequence DisplayName="[926011324] Sequence" sap:VirtualizedContainerService.HintSize="920,632" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <rac:InputDialog DisplayName="[926013324] Input Dialog" sap:VirtualizedContainerService.HintSize="897.6,22.4" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Lựa chọn kiểu chơi" Options="[{&quot;Bất tử&quot;,&quot;Tự động chơi&quot;,&quot;Reset&quot;}]" Title="GAME MODE" TopMost="False">
+                  <rac:InputDialog.Result>
+                    <OutArgument x:TypeArguments="x:String">[strChoice]</OutArgument>
+                  </rac:InputDialog.Result>
+                </rac:InputDialog>
+                <If Condition="[strChoice = &quot;Bất tử&quot;]" DisplayName="[926015325] If" sap:VirtualizedContainerService.HintSize="897.6,444.8" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If.Then>
+                    <rab:InjectJs Browser="{x:Null}" LastElement="{x:Null}" LastLocator="{x:Null}" ScriptOutput="{x:Null}" ContinueOnError="False" DisplayName="[970781082] Inject Javascript(B)" sap:VirtualizedContainerService.HintSize="313.6,59.2" sap2010:WorkflowViewState.IdRef="InjectJs_2" ScriptCode="Runner.prototype.gameOver = function (){}" />
+                  </If.Then>
+                  <If.Else>
+                    <If Condition="[strChoice = &quot;Tự động chơi&quot;]" DisplayName="[009961566] If" sap:VirtualizedContainerService.HintSize="560,296" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <rab:InjectJs Browser="{x:Null}" LastElement="{x:Null}" LastLocator="{x:Null}" ScriptOutput="{x:Null}" ContinueOnError="False" DisplayName="[009965566] Inject Javascript(B)" sap:VirtualizedContainerService.HintSize="313.6,59.2" sap2010:WorkflowViewState.IdRef="InjectJs_3" ScriptCode="[strScript]" />
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="[414605063] Sequence" sap:VirtualizedContainerService.HintSize="222.4,147.2">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <rab:Refresh Browser="{x:Null}" LastElement="{x:Null}" LastLocator="{x:Null}" ContinueOnError="False" DisplayName="[414607071] Refresh(B)" sap:VirtualizedContainerService.HintSize="200,22.4" />
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </If.Else>
+                </If>
+              </Sequence>
+            </DoWhile>
+          </Sequence>
+        </ActivityAction>
+      </rab:OpenBrowser.Body>
+      <rab:OpenBrowser.UserProfilePreferences>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </rab:OpenBrowser.UserProfilePreferences>
+    </rab:OpenBrowser>
+  </Sequence>
+</Activity>
